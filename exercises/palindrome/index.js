@@ -9,4 +9,15 @@
 
 function palindrome(str) {}
 
+// function palindrome(str) {
+//     return str.split('').every((ele, index) => {
+//         return ele === str[str.length - index - 1];
+//     })
+// }
+
+// function palindrome(str) {
+//     let rev = str.split('').reverse().join('');
+//     return str === rev;
+// }
+
 module.exports = palindrome;
