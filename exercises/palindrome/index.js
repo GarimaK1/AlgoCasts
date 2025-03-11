@@ -10,6 +10,22 @@
 function palindrome(str) {}
 
 // function palindrome(str) {
+
+//     for (let i = 0; i < Math.floor(str.length/2); i++) {
+//         if (str[i] !== str[str.length - i - 1]){
+//             return false;
+//         }
+//     }
+//     return true;
+//     // 'abcdefg'
+//     // str.length = 6
+//     // str.length/2 = 3
+//     // Math.floor(str.length/2) = 3
+//     // 0 1 2 3 4 5 6
+//     // a b c d
+// }
+
+// function palindrome(str) {
 //     return str.split('').every((ele, index) => {
 //         return ele === str[str.length - index - 1];
 //     })
