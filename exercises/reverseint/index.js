@@ -16,6 +16,19 @@ function reverseInt(n) {
 }
 
 // function reverseInt(n) {
+//     switch(Math.sign(n)) {
+//         case +1:
+//             return parseInt(n.toString().split('').reverse().join(''), 10);
+//         case -1:
+//             return -parseInt(n.toString().split('').reverse().join(''), 10);
+//         case 0:
+//             return 0;
+//         case -0:
+//             return -0;
+//     }
+// }
+
+// function reverseInt(n) {
 //     let rev, temp;
 //     if (Math.sign(n) > 0) {
 //         return parseInt(n.toString().split('').reverse().join(''));
@@ -38,6 +51,45 @@ function reverseInt(n) {
 //         rev = temp.reverse().join('');
 //     }
 //     return parseInt(sign + rev);
+// }
+
+// function reverseInt(num) {
+//     let str = num.toString();
+//     let revArr = str.split('').reverse();
+//     let revStr = '';
+    
+//     if (Math.floor(num / 10) === 0) {
+//         // If 0/-0/+0, or single digit, return as it is.
+//         return num;
+//     } else if (num < 0) {
+//         // Negative integer
+//         revArr.pop();
+//         revStr = revArr.join('').replace(/[\s]/g, '');
+//         return parseInt(`-${revStr}`);
+//     } else {
+//         // Positive Integer
+//         revStr = revArr.join('').replace(/[\s]/g, '');
+//         return parseInt(revStr);
+//     }
+// }
+
+
+// function reverseInt(num) {
+//     let str = num.toString();
+//     let revStr = '';
+//     if (Math.floor(num / 10) === 0) {
+//         return num;
+//     } else {
+//         for (let char of str) {
+//             revStr = char + revStr;
+//         }
+//         if (num < 0) {
+//             revStr.replace(/[\-\s]/g, '');
+//             return parseInt(`-${revStr}`);
+//         } else {
+//             return parseInt(revStr.replace(/[\s]/g, ''));
+//         }   
+//     }
 // }
 
 module.exports = reverseInt;
