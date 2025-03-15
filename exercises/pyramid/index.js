@@ -64,7 +64,7 @@
 //          '0#######8' numOfSymbols = 7, row 3, midpoint = 4
 //          '#########' numOfSymbols = 9, row 4, midpoint = 4
 
-// So, column = midpoint +- row has to be '#' symbol.
+// So, column = midpoint, midpoint +- row has to be '#' symbol.
 // function pyramid(n) {
 //   const midpoint = Math.floor((2 * n - 1) / 2);
 //   // for n = 5, midpoint = Math.floor(4.5) = 4
