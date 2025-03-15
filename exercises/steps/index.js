@@ -55,4 +55,14 @@
 //     }
 // }
 
+
+// Solution from comments in Stephen's course:
+// https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/learn/lecture/8546988#questions/12374812
+// function steps(n) {
+//   for (let i = 1; i <= n; i++) {
+//       console.log('#'.repeat(i) + ' '.repeat(n - i));
+//   }
+// }
+
+
 module.exports = steps;

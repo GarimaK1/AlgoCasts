@@ -17,7 +17,7 @@
 // function pyramid(n) {}
 
 
-
+// My solution (n, row, col = 1 to 5):
 // n = 1 -> '#'
 // n = 2 -> ' # ' 
 //          '###'
@@ -57,14 +57,14 @@
 
 
 
-
+// Stephen's Solution (row, column = 0 to 4)
 // n = 5 -> '0123#5678' numOfSymbols = 1, row 0, midpoint = 4
 //          '012###678' numOfSymbols = 3, row 1, midpoint = 4
 //          '01#####78' numOfSymbols = 5, row 2, midpoint = 4
 //          '0#######8' numOfSymbols = 7, row 3, midpoint = 4
 //          '#########' numOfSymbols = 9, row 4, midpoint = 4
 
-// So, column = midpoint +- row has to be '#' symbol.
+// So, column = midpoint, midpoint +- row has to be '#' symbol.
 // function pyramid(n) {
 //   const midpoint = Math.floor((2 * n - 1) / 2);
 //   // for n = 5, midpoint = Math.floor(4.5) = 4
@@ -90,6 +90,14 @@
 // }
 
 
+
+// Solution from comments in Stephen's course:
+// https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/learn/lecture/8546988#questions/12374812
+// function pyramid(n) {
+//   for (let i = 1; i <= n; i++) {
+//       console.log(' '.repeat(n - i) + '#'.repeat(i * 2 - 1) + ' '.repeat(n - i));
+//   }
+// }
 
 
 module.exports = pyramid;

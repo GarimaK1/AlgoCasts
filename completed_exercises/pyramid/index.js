@@ -35,6 +35,7 @@ function pyramid(n, row = 0, level = '') {
 }
 
 module.exports = pyramid;
+
 // Stephen's Solution:
 // function pyramid(n) {
 //   const midpoint = Math.floor((2 * n - 1) / 2);
@@ -61,7 +62,7 @@ module.exports = pyramid;
 //          '0#######8' numOfSymbols = 7, row 3, midpoint = 4
 //          '#########' numOfSymbols = 9, row 4, midpoint = 4
 
-// So, column = midpoint +- row has to be '#' symbol.
+// So, column = midpoint, midpoint +- row has to be '#' symbol.
 // function pyramid(n) {
 //   const midpoint = Math.floor((2 * n - 1) / 2);
 //   // for n = 5, midpoint = Math.floor(4.5) = 4
@@ -83,5 +84,14 @@ module.exports = pyramid;
 //     }
 
 //     console.log(level);
+//   }
+// }
+
+
+// Solution from comments in Stephen's course:
+// https://www.udemy.com/course/coding-interview-bootcamp-algorithms-and-data-structure/learn/lecture/8546988#questions/12374812
+// function pyramid(n) {
+//   for (let i = 1; i <= n; i++) {
+//       console.log(' '.repeat(n - i) + '#'.repeat(i * 2 - 1) + ' '.repeat(n - i));
 //   }
 // }
