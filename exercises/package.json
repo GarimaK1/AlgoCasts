@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx jest foldername/test.js --watch"
+    "test": "npx jest foldername/test.js --watch",
+    "debug": "node inspect foldername/index.js"
   },
   "jest": {
     "testEnvironment": "node"
