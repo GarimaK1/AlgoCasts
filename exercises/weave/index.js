@@ -40,6 +40,31 @@ function weave(sourceOne, sourceTwo) {
     return q;
 }
 
+
+// Attempt on 5th July 2025:
+function weave(sourceOne, sourceTwo) {
+    const q = new Queue();
+    
+    // Alternate adding items to q while both sourceOne & sourceTwo have stuff in them.
+    // If either one ends, end loop.
+    while (sourceOne.peek() !== undefined && sourceTwo.peek() !== undefined) {
+        q.add(sourceOne.remove());
+        q.add(sourceTwo.remove());
+    }
+
+    // At this point, only one of sourceOne & sourceTwo has items, so only one while loop will run.
+    while (sourceOne.peek() !== undefined) {
+        q.add(sourceOne.remove());
+    }
+
+    while (sourceTwo.peek() !== undefined) {
+        q.add(sourceTwo.remove());
+    }
+    
+    return q;
+}
+
+//Old Attempt
 // My solution: Is unnecessarily complicated. Use Stephen's version above.
 // function weave(sourceOne, sourceTwo) {
 //     const q3 = new Queue();
